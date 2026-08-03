@@ -1,1 +1,14 @@
-@page{size:A4;margin:16mm}body{background:#fff}.resume{margin:0;max-width:none;padding:0}
+@page {
+    size: A4;
+    margin: 16mm;
+}
+
+body {
+    background: #fff;
+}
+
+.resume {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+}
