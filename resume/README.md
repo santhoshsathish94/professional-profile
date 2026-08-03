@@ -1,5 +1,5 @@
-# Resume Folder
+# Resume
 
-This folder contains a simple HTML/CSS resume page.
+Open `index.html` in a browser.
 
-Open index.html in a browser to view it.
+Use **Print -> Save as PDF** to generate the printable resume.
