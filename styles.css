@@ -28,13 +28,34 @@ h1 {
 }
 
 .contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    column-gap: 34px;
+    row-gap: 10px;
+
+    margin-top: 18px;
+    margin-bottom: 32px;
+
     font-size: 13px;
     color: #6B7280;
+    line-height: 1.6;
+}
+
+.contact span {
+    display: block;
 }
 
 .contact a {
     color: #0F766E;
     text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .contact {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+    }
 }
 
 section {
