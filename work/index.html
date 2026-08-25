@@ -50,6 +50,13 @@
         between steps, success reported without verification, agreement offered in place of judgment. Each
         one is caught by a different part of the loop below, which is the point of having a loop at all.
       </p>
+      <p>
+        In practice this has meant running internal sessions and workshops, then building the orchestration a
+        team actually uses — read-only access to internal systems, automated deployment testing wired into
+        non-production environments and pipeline triggers — so that most of the work can happen through a
+        chat interface without anyone having to be the bottleneck. An organization grows when capability
+        spreads, not when it concentrates in whoever happens to know the system best.
+      </p>
     </section>
 
     <section>
@@ -110,8 +117,32 @@
         A guardrail enforced by a content model or a type contract survives turnover, deadlines, and whoever
         is reviewing that day. A guardrail enforced by review does not. That matters more, not less, when AI
         is producing some of the work — a system that constrains what can be expressed is a system AI can be
-        turned loose inside.
+        turned loose inside. Read-only access to production data is the same idea applied to blast radius:
+        the safety does not depend on anyone remembering to be careful.
       </p>
+
+      <div class="case">
+        <span class="rung">Evidence: observed in the real environment</span>
+        <h3>Answers when nobody is left to answer</h3>
+        <p>
+          Most organizations lose knowledge faster than they document it. The people who built a system move
+          on, the mapping was always too large to write down, and what remains is a set of behaviours nobody
+          can explain. Orchestration over read-only access to internal systems turns that from a staffing
+          problem into a retrieval problem.
+        </p>
+        <p>
+          A production data issue had survived an overnight investigation: new listings were not appearing
+          after repeated loads, the team that built the sync flow had left, and there were thousands of
+          per-organization mappings with no documentation. Backtracking from the customer-visible symptom to
+          the source located a single misconfigured flag between data ingestion and the database. A separate
+          support case — saved favourites showing on desktop but not on mobile, caused by an email-relay
+          service silently creating a second account — had been circulating between teams without a clear
+          owner, and was answered the same way.
+        </p>
+        <p>
+          Neither answer required the original authors. That is the property worth designing for.
+        </p>
+      </div>
 
       <div class="case">
         <span class="rung">Evidence: observed in the real environment</span>
