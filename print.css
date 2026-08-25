@@ -98,6 +98,11 @@ h4 {
     break-inside: avoid;
 }
 
+/* Short employment blocks stay whole, so an entry is never orphaned from its employer heading. */
+.role-block {
+    break-inside: avoid;
+}
+
 /* Never strand one or two lines of a paragraph either side of a page break. */
 p,
 li {
