@@ -1,10 +1,12 @@
 @page {
     size: A4;
-    margin: 16mm;
+    margin: 13mm 14mm;
 }
 
 body {
     background: #fff;
+    font-size: 9.5pt;
+    line-height: 1.28;
 }
 
 .resume {
@@ -13,8 +15,72 @@ body {
     padding: 0;
 }
 
+h1 {
+    font-size: 18pt;
+}
+
+.role {
+    font-size: 10.5pt;
+}
+
+.tagline {
+    font-size: 9pt;
+    margin: 5px 0 0;
+}
+
+.contact {
+    margin-top: 9px;
+    margin-bottom: 12px;
+    font-size: 8pt;
+    line-height: 1.35;
+    column-gap: 24px;
+    row-gap: 3px;
+}
+
 section {
-    break-inside: auto;
+    margin-top: 8px;
+    padding-top: 6px;
+}
+
+h2 {
+    font-size: 11.5pt;
+    margin: 0 0 5px;
+}
+
+h3 {
+    font-size: 10pt;
+    margin: 7px 0 2px;
+}
+
+h3:not(:first-of-type) {
+    margin-top: 8px;
+}
+
+h3 span {
+    font-size: 8.5pt;
+}
+
+h4 {
+    font-size: 9.5pt;
+    margin: 5px 0 1px;
+}
+
+p {
+    margin: 1px 0 4px;
+}
+
+.roles {
+    font-size: 8.5pt;
+}
+
+ul {
+    margin: 1px 0 4px;
+    padding-left: 15px;
+}
+
+li {
+    line-height: 1.28;
+    margin-bottom: 1px;
 }
 
 h2,

@@ -30,16 +30,12 @@
     <section>
       <h2>Profile</h2>
       <p>
-        Architect with ten years of experience designing and modernizing enterprise software systems, now
-        focused on AI orchestration, human-AI collaboration, and practical AI adoption. Experienced across
-        platform architecture, distributed systems, enterprise modernization, and the part that decides whether
-        any of it lands: helping engineers and stakeholders understand a system well enough to trust and evolve it.
-      </p>
-      <p>
-        Creator of an open, evidence-based AI Orchestration Framework for turning human intent and AI capability
-        into measurable outcomes. Treat AI as an engineering capability rather than a collection of tools:
-        understand the problem first, choose the focused path, keep human accountability, prove outcomes with
-        evidence, and turn validated experience into reusable organizational knowledge.
+        Architect with ten years designing and modernizing enterprise software systems, now focused on AI
+        orchestration, human-AI collaboration, and practical AI adoption. Creator of an open, evidence-based
+        AI Orchestration Framework for turning human intent and AI capability into measurable outcomes.
+        I treat AI as an engineering capability rather than a set of tools: understand the problem first, keep
+        human accountability, prove outcomes with evidence, and turn validated experience into knowledge a
+        team can reuse.
       </p>
     </section>
 
@@ -47,38 +43,28 @@
       <h2>AI Engineering &amp; Orchestration</h2>
 
       <h3>AI Orchestration Framework <span>Independent Open-Source Project • 2026 – Present</span></h3>
-      <p>
-        Created an open, evidence-based operating model for applying AI to engineering and business workflows.
-      </p>
       <ul>
         <li>Defined the lifecycle <strong>Opportunity → Understand → Plan → Execute → Proof → Grow</strong> to connect human intent, AI capability, execution, evidence, and learning.</li>
-        <li>Designed orchestration as an operating model rather than an LLM framework, agent SDK, prompt library, or runtime.</li>
-        <li>Established evidence and autonomy ladders so increasing AI capability is progressively earned through proof rather than assumed.</li>
-        <li>Focused the framework on adoption: making AI approaches understandable, reusable, and accessible to broader engineering teams rather than concentrating expertise within a small group.</li>
-        <li>Built an interactive public website, quickstart, working templates, reference implementations, field lessons, and documented production case studies.</li>
-        <li>Open-sourced the framework as a feedback-driven project and continue evolving it through evidence from real engineering work.</li>
+        <li>Established evidence and autonomy ladders so increasing AI capability is earned through proof rather than assumed — including on my own claims.</li>
+        <li>Focused the framework on adoption: making AI approaches understandable and reusable by broader teams rather than concentrating expertise in a few people.</li>
+        <li>Shipped an interactive public website, quickstart, working templates, reference implementations, field lessons, and graded case studies.</li>
       </ul>
       <p class="roles">
         Deep dive: <a href="work/index.html">santhoshsathish94.github.io/professional-profile/work</a>
       </p>
 
       <h3>Production AI-Assisted Engineering</h3>
-      <p>
-        Applied AI as a reasoning and investigation partner while retaining engineering ownership and validating conclusions with evidence.
-      </p>
 
       <h4>Enterprise Content API Migration</h4>
       <ul>
-        <li>Delivered a migration estimated at <strong>8–10 weeks of team effort in approximately one day</strong>.</li>
-        <li>Migrated GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs while preserving routes, JSON shapes, response envelopes, and consumer compatibility.</li>
+        <li>Delivered a migration estimated at <strong>8–10 weeks of team effort in approximately one day</strong> — GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, preserving routes, JSON shapes, and response envelopes so no consumer had to change.</li>
         <li>Replaced approximately <strong>7,800 lines across 200+ files</strong>, with parity validated byte-for-byte against live traffic in preprod. The production cutover has not yet run.</li>
       </ul>
 
       <h4>Production React / Next.js Memory Leak</h4>
       <ul>
-        <li>Kept investigating recurring production out-of-memory failures after an operational workaround had already stopped the bleeding.</li>
-        <li>Combined load testing, production evidence, pod heap snapshots, large stack traces, and AI-assisted reasoning to locate the underlying issue inside React Server Components rendering.</li>
-        <li>Reduced the root cause to a focused one-file change and contributed it upstream to React as a pull request — CI-green and awaiting maintainer review — so other applications need not carry the same workaround.</li>
+        <li>Kept investigating recurring out-of-memory failures after an operational workaround had already stopped the bleeding, combining load testing, heap snapshots, and AI-assisted reasoning to locate the cause inside React Server Components rendering.</li>
+        <li>Reduced the root cause to a one-file change and contributed it upstream to React — CI-green, awaiting maintainer review — so other applications need not carry the same workaround.</li>
       </ul>
     </section>
 
@@ -89,74 +75,49 @@
       <p class="roles">AI Orchestration Architect (Jul 2025 – Present) &middot; Lead Engineer (Jan 2020 – Jul 2025)</p>
 
       <h4>Applied AI Enablement</h4>
-      <p>Currently leading adoption of applied AI across the engineering team — training engineers in AI-assisted ways of working, establishing where AI is and is not appropriate, and turning what each cycle proves into reusable practice rather than individual expertise.</p>
-
-      <h4>Platform Architecture &amp; Modernization</h4>
-      <p>Established the architecture separating the Xome experience from shared platform capabilities, enabling independent evolution and reducing coupling across enterprise systems.</p>
+      <p>Leading adoption of applied AI across the engineering team — training engineers in AI-assisted ways of working, establishing where AI is and is not appropriate, and turning what each cycle proves into reusable practice rather than individual expertise.</p>
 
       <h4>Composable Content Architecture &mdash; xome.com Redesign</h4>
-      <p>Designed the content architecture behind the xome.com redesign, separating content management from software releases. Pages are assembled from an ordered set of reusable, independently governed sections rather than hand-built page templates, so the marketing team composes new pages within brand standards without waiting on an engineering deployment. Around 48 section types share a single polymorphic contract, with permitted nesting, layout variants, and required fields enforced by the model itself rather than by review; eight page types render through one contract, with draft preview end to end.</p>
+      <p>Designed the content architecture behind the xome.com redesign, separating content management from software releases. Pages are assembled from an ordered set of reusable, independently governed sections rather than hand-built templates, so the marketing team composes new pages within brand standards without waiting on an engineering deployment. Around 48 section types share one polymorphic contract, with permitted nesting, layout variants, and required fields enforced by the model rather than by review.</p>
 
       <h4>API Surface &mdash; Architecture Decision</h4>
-      <p>Argued against a proposed single generic content endpoint and carried the team to separate per-resource endpoints. Presented the trade-off directly: distinct contracts for pages, sections, blogs, help center, and glossary stay independently testable, and the blast radius of a future content change is confined to one resource rather than coupling every consumer to one shared shape. The decision held, and the shipped API is built that way.</p>
+      <p>Argued against a proposed single generic content endpoint and carried the team to separate per-resource endpoints, on the grounds that distinct contracts stay independently testable and confine the blast radius of a future content change to one resource. The decision held, and the shipped API is built that way.</p>
 
-      <h4>Address Search</h4>
-      <p>Redesigned enterprise address search through a new indexing strategy, improving search accuracy while preserving existing capabilities.</p>
+      <h4>Platform Architecture</h4>
+      <p>Established the architecture separating the Xome experience from shared platform capabilities, enabling independent evolution across enterprise systems; redesigned enterprise address search through a new indexing strategy that improved accuracy without losing existing capability.</p>
 
       <h4>Technical Advisory</h4>
-      <p>Work with both engineering teams and business stakeholders — taking architecture and modernization decisions from technical trade-offs through to the business case, and back again.</p>
+      <p>Work with engineering teams and business stakeholders alike — taking architecture decisions from technical trade-offs through to the business case, and back again.</p>
 
       <h3>Chatly <span>Software Engineer • Nov 2018 – Jan 2020</span></h3>
-      <h4>Global Calls Platform</h4>
-      <p>Transformed a business-critical WeChat integration platform into a system the team could understand, evolve, and confidently extend across application architecture and integrations. Worked directly with the team and leadership on scope, trade-offs, and direction.</p>
+      <p>Transformed a business-critical WeChat integration platform into a system the team could understand, evolve, and confidently extend. Worked directly with the team and leadership on scope, trade-offs, and direction.</p>
 
       <h3>UB Technology Innovations <span>Software Engineer • Jun 2016 – Oct 2018</span></h3>
-      <h4>Payroll Transformation</h4>
-      <p>Built a payroll platform around real operational workflows, enabling administrators to validate, correct, and trust payroll results.</p>
-      <h4>Client-Facing Delivery</h4>
-      <p>Worked directly with clients and business stakeholders through requirements, demonstrations, and rollout — translating operational needs into system design and explaining technical constraints in terms the business could act on.</p>
+      <p>Built a payroll platform around real operational workflows, enabling administrators to validate, correct, and trust payroll results. Worked directly with clients and business stakeholders through requirements, demonstrations, and rollout — translating operational needs into system design and explaining technical constraints in terms the business could act on.</p>
     </section>
 
     <section>
       <h2>Architecture &amp; Engineering</h2>
 
       <h3>AI &amp; Applied AI</h3>
-      <p>AI Orchestration • Human-AI Collaboration • AI-Assisted Software Engineering • AI Adoption • AI Workflow Design • Evidence-Based Engineering</p>
+      <p>AI Orchestration • Human-AI Collaboration • AI-Assisted Software Engineering • AI Adoption • Evidence-Based Engineering</p>
 
       <h3>Architecture</h3>
-      <p>Software Architecture • Distributed Systems • Platform Architecture • Enterprise Modernization • API Architecture • Systems Thinking • Integration Architecture</p>
+      <p>Software Architecture • Distributed Systems • Platform Architecture • Enterprise Modernization • API Architecture • Integration Architecture • Systems Thinking</p>
 
-      <h3>Engineering</h3>
-      <p>.NET • C# • React • Next.js • TypeScript • GraphQL • REST APIs • SQL Server</p>
-      <p>Primary languages C# and TypeScript; comfortable reading and working in Python.</p>
+      <h3>Engineering &amp; Cloud</h3>
+      <p>.NET • C# • React • Next.js • TypeScript • GraphQL • REST APIs • SQL Server • Azure • Kubernetes • Docker • Azure DevOps • Contentful • Elasticsearch<br>
+        Primary languages C# and TypeScript; comfortable reading and working in Python.</p>
 
-      <h3>Cloud &amp; Platforms</h3>
-      <p>Azure • Kubernetes • Docker • Azure DevOps • Contentful • Elasticsearch</p>
-
-      <h3>Engineering Practices</h3>
-      <p>Production Debugging • Performance Engineering • Root-Cause Analysis • Load Testing • Architecture Simplification • Technical Leadership • Team Enablement</p>
-
-      <h3>Communication &amp; Enablement</h3>
-      <p>Technical Writing • Architecture Documentation • Engineer Training • Stakeholder Communication • Translating Technical Trade-offs into Business Terms</p>
+      <h3>Practice &amp; Communication</h3>
+      <p>Production Debugging • Performance Engineering • Root-Cause Analysis • Load Testing • Technical Writing • Engineer Training • Stakeholder Communication • Translating Trade-offs into Business Terms</p>
     </section>
 
     <section>
       <h2>Engineering Principles</h2>
       <p><strong>Understand before fixing.</strong> Investigate the underlying system and establish sufficient context before choosing a solution.</p>
-      <p><strong>Focus over parallelism.</strong> Parallelize only genuinely independent work; coordination itself has a cost.</p>
-      <p><strong>Prove outcomes, not activity.</strong> A successful execution is not evidence of a successful outcome.</p>
-      <p><strong>Learn from failure and success.</strong> Capture validated experience so future engineering decisions become better.</p>
-      <p><strong>Design for adoption.</strong> Technology creates greater impact when teams can understand it, adopt it, and grow with it.</p>
-    </section>
-
-    <section>
-      <h2>Guiding Principle</h2>
-      <p>
-        AI is another engineering capability, and it has to be orchestrated like any other part of a software
-        system. The goal is not to maximize AI activity, but to turn capability into coherent outcomes through
-        context, focus, ownership, evidence, and learning — and to make that repeatable by people other than
-        the person who figured it out first.
-      </p>
+      <p><strong>Prove outcomes, not activity.</strong> A successful execution is not evidence of a successful outcome, and the honest evidence rung is worth naming.</p>
+      <p><strong>Design for adoption.</strong> AI is another engineering capability, and the goal is not to maximize AI activity but to turn it into outcomes someone other than the author can repeat.</p>
     </section>
 
     <section>
