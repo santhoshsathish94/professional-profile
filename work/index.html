@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Orchestration — Selected Work | Santhosh Narayanan</title>
+  <meta name="description"
+    content="An open, evidence-based operating model for turning human intent and AI capability into measurable outcomes — and the production work it came from.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <main class="wrap">
+    <nav>
+      <a href="../index.html">← Résumé</a>
+      <a href="https://santhoshsathish94.github.io/ai-orchestration-framework/">Framework site</a>
+      <a href="https://github.com/santhoshsathish94/ai-orchestration-framework">Repository</a>
+      <a href="https://www.linkedin.com/in/santhosh-narayanan-link/">LinkedIn</a>
+    </nav>
+
+    <header>
+      <h1>Turning AI capability into outcomes that can be proven</h1>
+      <p class="lede">
+        The AI Orchestration Framework is an open operating model for how humans and AI work together
+        to reach an outcome — through context, execution, evidence, and learning.
+      </p>
+      <p class="byline">
+        Written and maintained by <a href="../index.html">Santhosh Narayanan</a>, AI Orchestration Architect.
+        Built from production engineering work, not from theory.
+      </p>
+    </header>
+
+    <section>
+      <h2>The problem it addresses</h2>
+      <p>
+        Most teams adopting AI do not fail because the model is not capable enough. They fail because the
+        work around the model is unstructured: the problem was never framed, the context was insufficient,
+        nobody owned the outcome, and nothing was proven afterwards. Output goes up. Confidence does not.
+      </p>
+      <p class="pull">Agentic workflows repeat. Orchestration learns.</p>
+      <p>
+        Agents can act and workflows can repeat, but neither improves on its own. Orchestration connects
+        context, decisions, execution, proof, and learning so that the next cycle starts from more than the
+        last one did. It is deliberately not a runtime — agent frameworks, workflow engines, and tool
+        protocols sit inside it rather than compete with it.
+      </p>
+    </section>
+
+    <section>
+      <h2>The lifecycle</h2>
+      <p>Six stages, one principle each — if you remember the lifecycle, you remember the principles.</p>
+      <ul class="stages">
+        <li><strong>Opportunity</strong><span>Define the problem and the outcome worth pursuing. Start with the
+            opportunity, not the tool.</span></li>
+        <li><strong>Understand</strong><span>Establish the context needed to decide well. Never assume the context is
+            sufficient.</span></li>
+        <li><strong>Plan</strong><span>Choose the focused path, boundaries, and ownership. Parallelize only what is
+            genuinely independent.</span></li>
+        <li><strong>Execute</strong><span>Do the work, adapting as evidence changes direction. Delegation never
+            dissolves accountability.</span></li>
+        <li><strong>Proof</strong><span>Demonstrate that the intended outcome actually happened. Prove outcomes, not
+            activity.</span></li>
+        <li><strong>Grow</strong><span>Feed what was learned into the next cycle. Only validated experience becomes
+            expertise.</span></li>
+      </ul>
+      <p>
+        When Proof fails, the loop returns to Understand rather than Execute. Repeatedly retrying a fix is the
+        most common way AI-assisted work burns effort without moving.
+      </p>
+    </section>
+
+    <section>
+      <h2>Grading the evidence</h2>
+      <p>
+        The framework refuses to let &ldquo;it worked&rdquo; stand as a claim. Every result is placed on an
+        evidence ladder, and the honest rung is named:
+      </p>
+      <ol class="ladder">
+        <li><strong>Asserted</strong> — someone says it works.</li>
+        <li><strong>Demonstrated once</strong> — it was seen working, one time.</li>
+        <li><strong>Tested repeatably</strong> — it works again on demand.</li>
+        <li><strong>Measured before and after</strong> — the change is quantified.</li>
+        <li><strong>Observed in the real environment</strong> — it holds in production.</li>
+      </ol>
+      <p>
+        The same discipline governs how much autonomy AI is given. Autonomy levels are earned by consistently
+        reaching Proof, capped by blast radius, and revocable when evidence stops supporting them.
+      </p>
+    </section>
+
+    <section>
+      <h2>Where it has been applied</h2>
+
+      <div class="case">
+        <span class="rung">Evidence: measured, observed in production</span>
+        <h3>Enterprise content API migration</h3>
+        <p>
+          A migration estimated at 8–10 weeks of team effort, delivered in about a day. GraphQL to REST and
+          .NET 9 MVC to .NET 10 Minimal APIs — roughly 7,800 lines across 200+ files replaced, with every
+          route, JSON shape, and response envelope preserved so no consumer had to change.
+        </p>
+        <p>
+          The speed is not the interesting part. The migration was validated against live traffic before a
+          phased cutover, which is what made it safe to ship rather than merely fast to write.
+        </p>
+      </div>
+
+      <div class="case">
+        <span class="rung">Evidence: measured before and after</span>
+        <h3>Production memory leak, followed to its root cause</h3>
+        <p>
+          Recurring out-of-memory crashes were first stabilized with a blunt mitigation. The investigation then
+          continued past the workaround — through load testing, heap snapshots, and production evidence — into
+          React's Server Components renderer.
+        </p>
+        <p>
+          The root cause reduced to a one-file change, contributed upstream to React as a pull request that is
+          CI-green and awaiting maintainer review, so other applications need not carry the same workaround.
+        </p>
+      </div>
+
+      <div class="case">
+        <span class="rung">Evidence: demonstrated once</span>
+        <h3>Reference implementations</h3>
+        <p>
+          Two patterns — cross-team knowledge access, and production exception remediation — have been built and
+          demonstrated against real organizational data across a handful of real cases. They have not yet been
+          put in front of end users or adopted organization-wide, and the framework says so rather than
+          implying more.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Why it is public</h2>
+      <p>
+        A way of working that only one person understands does not change how a team operates. The framework is
+        open, documented end to end, and shipped with a quickstart, a one-page working template, worked
+        examples, an analysis of how AI fails at each stage, and field lessons from getting it wrong. It is
+        feedback-driven and still evolving as more evidence arrives.
+      </p>
+      <ul class="links">
+        <li><a href="https://santhoshsathish94.github.io/ai-orchestration-framework/">Read the framework</a></li>
+        <li><a href="https://github.com/santhoshsathish94/ai-orchestration-framework">View the source</a></li>
+        <li><a href="../index.html">See the résumé</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>
+        Santhosh Narayanan — Chennai, India ·
+        <a href="mailto:santhoshsathish94@gmail.com">santhoshsathish94@gmail.com</a> ·
+        <a href="https://github.com/santhoshsathish94">GitHub</a>
+      </p>
+    </footer>
+  </main>
+</body>
+
+</html>
