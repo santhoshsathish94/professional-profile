@@ -189,9 +189,14 @@
         <span class="rung">Evidence: measured before and after</span>
         <h3>Enterprise content API migration</h3>
         <p>
-          A migration estimated at 8–10 weeks of team effort, delivered in about a day. GraphQL to REST and
+          A migration estimated at 8–10 weeks of team effort, executed in about a day. GraphQL to REST and
           .NET 9 MVC to .NET 10 Minimal APIs — roughly 7,800 lines across 200+ files replaced, with every
           route, JSON shape, and response envelope preserved so no consumer had to change.
+        </p>
+        <p>
+          That day is the execution. Testing and parity validation took another, and getting agreement to
+          ship took longer than either — the work was not continuous. Writing the code stopped being the
+          expensive part, which moves the bottleneck rather than removing it.
         </p>
         <p>
           The speed is not the interesting part. An automated parity harness checked the new API byte-for-byte
