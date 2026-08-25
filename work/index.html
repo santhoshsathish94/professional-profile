@@ -4,10 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Orchestration — Selected Work | Santhosh Narayanan</title>
+  <title>How I think about AI in engineering | Santhosh Narayanan</title>
   <meta name="description"
-    content="An open, evidence-based operating model for turning human intent and AI capability into measurable outcomes — and the production work it came from.">
-  <link rel="preload" href="../fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+    content="Notes on human-AI division of labour, designing systems where guardrails hold on their own, and proving outcomes rather than asserting them.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -21,36 +20,44 @@
     </nav>
 
     <header>
-      <h1>Turning AI capability into outcomes that can be proven</h1>
+      <h1>AI is a capability to be engineered, not a tool to be adopted</h1>
       <p class="lede">
-        The AI Orchestration Framework is an open operating model for how humans and AI work together
-        to reach an outcome — through context, execution, evidence, and learning.
+        Most of what decides whether AI helps is not the model. It is the work around the model — who holds
+        the intent, what context the system has, where the guardrails live, and whether anyone proved the
+        outcome afterwards.
       </p>
       <p class="byline">
-        Written and maintained by <a href="../index.html">Santhosh Narayanan</a>, AI Orchestration Architect.
-        Built from production engineering work, not from theory.
+        Notes on how I approach that, by <a href="../index.html">Santhosh Narayanan</a>, AI Orchestration
+        Architect — drawn from enterprise delivery work rather than from theory.
       </p>
     </header>
 
     <section>
-      <h2>The problem it addresses</h2>
+      <h2>Who holds what</h2>
       <p>
-        Most teams adopting AI do not fail because the model is not capable enough. They fail because the
-        work around the model is unstructured: the problem was never framed, the context was insufficient,
-        nobody owned the outcome, and nothing was proven afterwards. Output goes up. Confidence does not.
+        The useful question is not how much AI can do. It is which parts of the work a human must keep. Get
+        that division wrong and you get output nobody can vouch for; get it right and AI removes most of the
+        cost of finding out whether an idea works.
       </p>
-      <p class="pull">Agentic workflows repeat. Orchestration learns.</p>
+      <ul class="stages">
+        <li><strong>The human keeps</strong><span>Intent, framing, and the definition of a good outcome. Judgment on trade-offs. Accountability for what ships — delegation never dissolves it.</span></li>
+        <li><strong>AI can carry</strong><span>Investigation, reproduction, implementation, and the legwork of checking. Breadth a person does not have time for, at a speed that changes which problems are worth attempting.</span></li>
+      </ul>
       <p>
-        Agents can act and workflows can repeat, but neither improves on its own. Orchestration connects
-        context, decisions, execution, proof, and learning so that the next cycle starts from more than the
-        last one did. It is deliberately not a runtime — agent frameworks, workflow engines, and tool
-        protocols sit inside it rather than compete with it.
+        This is why framing matters so much. How a problem is stated changes the solution that gets found,
+        and AI will pursue a badly framed problem faster than a person would. The failure modes are specific
+        and recognisable: confident fabrication, a plausible-but-wrong root cause, context quietly lost
+        between steps, success reported without verification, agreement offered in place of judgment. Each
+        one is caught by a different part of the loop below, which is the point of having a loop at all.
       </p>
     </section>
 
     <section>
       <h2>The lifecycle</h2>
-      <p>Six stages, one principle each — if you remember the lifecycle, you remember the principles.</p>
+      <p>
+        I wrote this up as an open framework because a way of working that only one person understands does
+        not change how a team operates. Six stages, one principle each.
+      </p>
       <ul class="stages">
         <li><strong>Opportunity</strong><span>Define the problem and the outcome worth pursuing. Start with the
             opportunity, not the tool.</span></li>
@@ -68,6 +75,12 @@
       <p>
         When Proof fails, the loop returns to Understand rather than Execute. Repeatedly retrying a fix is the
         most common way AI-assisted work burns effort without moving.
+      </p>
+      <p class="pull">Agentic workflows repeat. Orchestration learns.</p>
+      <p>
+        Agents can act and workflows can repeat, but neither improves on its own. What makes the difference is
+        that the next cycle starts from more than the last one did. This is an operating model, not a runtime —
+        agent frameworks, workflow engines, and tool protocols sit inside it rather than compete with it.
       </p>
     </section>
 
@@ -92,6 +105,28 @@
 
     <section>
       <h2>Where it has been applied</h2>
+      <p>
+        The same instinct runs through the architecture work: put the rules where they hold on their own.
+        A guardrail enforced by a content model or a type contract survives turnover, deadlines, and whoever
+        is reviewing that day. A guardrail enforced by review does not. That matters more, not less, when AI
+        is producing some of the work — a system that constrains what can be expressed is a system AI can be
+        turned loose inside.
+      </p>
+
+      <div class="case">
+        <span class="rung">Evidence: observed in the real environment</span>
+        <h3>Composable content architecture</h3>
+        <p>
+          The content architecture behind a public website redesign: pages are composed from reusable,
+          independently governed sections instead of hand-built templates, so a new page ships without a code
+          change. 50 published pages across 8 page types run on it, with permitted nesting, layout variants,
+          and required fields enforced by the model rather than by review.
+        </p>
+        <p>
+          The interesting part is who it moved the work to. A marketing team composes freely and stays inside
+          brand standards because the standards are structural, not advisory.
+        </p>
+      </div>
 
       <div class="case">
         <span class="rung">Evidence: measured before and after</span>
@@ -103,22 +138,23 @@
         </p>
         <p>
           The speed is not the interesting part. An automated parity harness checked the new API byte-for-byte
-          against live traffic in preprod, which is what makes the compatibility claim provable rather than
-          asserted. The production cutover has not yet run, so this stops at rung 4.
+          against live traffic, which is what makes the compatibility claim provable rather than asserted. The
+          limiting factor on work like this turns out to be having an objective way to verify it, not headcount.
         </p>
       </div>
 
       <div class="case">
         <span class="rung">Evidence: measured before and after</span>
-        <h3>Production memory leak, followed to its root cause</h3>
+        <h3>A memory leak followed to its root cause</h3>
         <p>
-          Recurring out-of-memory crashes were first stabilized with a blunt mitigation. The investigation then
-          continued past the workaround — through load testing, heap snapshots, and production evidence — into
-          React's Server Components renderer.
+          Recurring out-of-memory crashes in production were first stabilised with a blunt mitigation. The
+          investigation then continued past the workaround — through load testing, heap snapshots, and
+          production evidence — into React's Server Components renderer.
         </p>
         <p>
-          The root cause reduced to a one-file change, contributed upstream to React as a pull request that is
-          CI-green and awaiting maintainer review, so other applications need not carry the same workaround.
+          The root cause reduced to a one-file change, contributed upstream to React so other applications
+          need not carry the same workaround. A workaround resolves an incident; a root cause can resolve a
+          class of them.
         </p>
       </div>
 
@@ -126,21 +162,20 @@
         <span class="rung">Evidence: demonstrated once</span>
         <h3>Reference implementations</h3>
         <p>
-          Two patterns — cross-team knowledge access, and production exception remediation — have been built and
+          Two patterns — cross-team knowledge access, and production exception remediation — built and
           demonstrated against real organizational data across a handful of real cases. They have not yet been
-          put in front of end users or adopted organization-wide, and the framework says so rather than
-          implying more.
+          put in front of end users or adopted organization-wide, and they say so rather than implying more.
         </p>
       </div>
     </section>
 
     <section>
-      <h2>Why it is public</h2>
+      <h2>Why any of this is written down</h2>
       <p>
-        A way of working that only one person understands does not change how a team operates. The framework is
-        open, documented end to end, and shipped with a quickstart, a one-page working template, worked
-        examples, an analysis of how AI fails at each stage, and field lessons from getting it wrong. It is
-        feedback-driven and still evolving as more evidence arrives.
+        A team does not get better because one person got better. The framework is open, documented end to
+        end, and shipped with a quickstart, a one-page working template, worked examples, an analysis of how
+        AI fails at each stage, and field lessons from getting it wrong. It is feedback-driven and still
+        changing as more evidence arrives.
       </p>
       <ul class="links">
         <li><a href="https://santhoshsathish94.github.io/ai-orchestration-framework/">Read the framework</a></li>
