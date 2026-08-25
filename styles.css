@@ -1,3 +1,12 @@
+/* Vendored so the printed PDF renders identically offline. Inter is SIL OFL; see fonts/LICENSE.txt. */
+@font-face {
+    font-family: Inter;
+    src: url("fonts/InterVariable.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: Inter, Arial, sans-serif;
     background: #eef2f4;
