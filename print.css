@@ -9,6 +9,10 @@ body {
     line-height: 1.28;
 }
 
+.site-nav {
+    display: none;
+}
+
 .resume {
     margin: 0;
     max-width: none;

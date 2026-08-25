@@ -12,6 +12,31 @@ body {
     padding: 48px;
 }
 
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: baseline;
+    font-size: 14px;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.site-nav a {
+    color: #0F766E;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.site-nav .is-current {
+    font-weight: 600;
+    color: #111827;
+}
+
 h1 {
     font-size: 32px;
     margin: 0;
