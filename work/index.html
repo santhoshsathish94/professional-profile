@@ -93,7 +93,7 @@
       <h2>Where it has been applied</h2>
 
       <div class="case">
-        <span class="rung">Evidence: measured, observed in production</span>
+        <span class="rung">Evidence: measured before and after</span>
         <h3>Enterprise content API migration</h3>
         <p>
           A migration estimated at 8–10 weeks of team effort, delivered in about a day. GraphQL to REST and
@@ -101,8 +101,9 @@
           route, JSON shape, and response envelope preserved so no consumer had to change.
         </p>
         <p>
-          The speed is not the interesting part. The migration was validated against live traffic before a
-          phased cutover, which is what made it safe to ship rather than merely fast to write.
+          The speed is not the interesting part. An automated parity harness checked the new API byte-for-byte
+          against live traffic in preprod, which is what makes the compatibility claim provable rather than
+          asserted. The production cutover has not yet run, so this stops at rung 4.
         </p>
       </div>
 
