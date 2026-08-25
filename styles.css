@@ -94,6 +94,13 @@ h3 span {
     margin-left: 8px;
 }
 
+.roles {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4B5563;
+}
+
 h4 {
     margin: 16px 0 4px;
     font-size: 16px;
@@ -104,4 +111,14 @@ h4 {
 p {
     line-height: 1.5;
     margin: 4px 0 10px;
+}
+
+ul {
+    margin: 4px 0 10px;
+    padding-left: 20px;
+}
+
+li {
+    line-height: 1.5;
+    margin-bottom: 4px;
 }
