@@ -102,5 +102,6 @@ li {
 }
 
 a {
-    color: inherit;
+    color: #0F766E;
+    text-decoration: none;
 }

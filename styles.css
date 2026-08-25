@@ -97,6 +97,11 @@ h1 {
     }
 }
 
+.resume a {
+    color: #0F766E;
+    text-decoration: none;
+}
+
 section {
     border-top: 1px solid #E5E7EB;
     margin-top: 24px;
