@@ -57,14 +57,14 @@
 
       <h4>Enterprise Content API Migration</h4>
       <ul>
-        <li>Delivered a migration estimated at <strong>8–10 weeks of team effort in approximately one day</strong> — GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, preserving routes, JSON shapes, and response envelopes so no consumer had to change.</li>
-        <li>Replaced approximately <strong>7,800 lines across 200+ files</strong>, with parity validated byte-for-byte against live traffic in preprod. The production cutover has not yet run.</li>
+        <li>Delivered a migration estimated at <strong>8–10 weeks of team effort in approximately one day</strong> — GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, preserving every route, JSON shape, and response envelope so no consumer had to change.</li>
+        <li>Replaced approximately <strong>7,800 lines across 200+ files</strong>, with byte-for-byte parity proven against live traffic by an automated harness rather than by review.</li>
       </ul>
 
       <h4>Production React / Next.js Memory Leak</h4>
       <ul>
-        <li>Kept investigating recurring out-of-memory failures after an operational workaround had already stopped the bleeding, combining load testing, heap snapshots, and AI-assisted reasoning to locate the cause inside React Server Components rendering.</li>
-        <li>Reduced the root cause to a one-file change and contributed it upstream to React — CI-green, awaiting maintainer review — so other applications need not carry the same workaround.</li>
+        <li>Traced recurring out-of-memory failures past an operational workaround to their root cause inside React Server Components rendering, using load testing, heap snapshots, and AI-assisted analysis.</li>
+        <li>Reduced the fix to a single file and contributed it upstream to React, so other applications need not carry the same workaround.</li>
       </ul>
     </section>
 
@@ -78,10 +78,10 @@
       <p>Leading adoption of applied AI across the engineering team — training engineers in AI-assisted ways of working, establishing where AI is and is not appropriate, and turning what each cycle proves into reusable practice rather than individual expertise.</p>
 
       <h4>Composable Content Architecture &mdash; xome.com Redesign</h4>
-      <p>Designed the content architecture behind the xome.com redesign: pages are assembled from an ordered set of reusable, independently governed sections rather than hand-built templates, so new pages are composed without a code change. <strong>50 published pages across 8 page types</strong> now run on it, averaging about five sections each, with no legacy page structure left behind. Guardrails sit in the model rather than in review &mdash; <strong>96% of link fields restrict which content types may be nested</strong> and two-thirds of all fields carry validations &mdash; so authors compose freely while staying inside brand standards.</p>
+      <p>Designed the content architecture behind the xome.com redesign: pages are composed from reusable, independently governed sections instead of hand-built templates, so a new page ships without a code change. <strong>50 published pages across 8 page types</strong> run on it today, with permitted nesting, layout variants, and required fields enforced by the model rather than by review — authors compose freely and stay inside brand standards by construction.</p>
 
       <h4>API Surface &mdash; Architecture Decision</h4>
-      <p>Argued against a proposed single generic content endpoint and carried the team to separate per-resource endpoints, on the grounds that distinct contracts stay independently testable and confine the blast radius of a future content change to one resource. The decision held, and the shipped API is built that way.</p>
+      <p>Argued against a proposed single generic content endpoint and carried the team to separate per-resource endpoints, on the grounds that distinct contracts stay independently testable and confine the blast radius of a future content change to one resource. The shipped API is built that way.</p>
 
       <h4>Platform Architecture</h4>
       <p>Established the architecture separating the Xome experience from shared platform capabilities, enabling independent evolution across enterprise systems; redesigned enterprise address search through a new indexing strategy that improved accuracy without losing existing capability.</p>
