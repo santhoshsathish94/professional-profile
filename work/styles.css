@@ -135,15 +135,6 @@ p {
     color: var(--muted);
 }
 
-.ladder {
-    margin: 16px 0;
-    padding-left: 20px;
-}
-
-.ladder li {
-    margin-bottom: 6px;
-}
-
 .case {
     border: 1px solid var(--line);
     padding: 20px 22px;
