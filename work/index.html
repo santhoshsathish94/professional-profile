@@ -118,21 +118,22 @@
     </section>
 
     <section>
-      <h2>Grading the evidence</h2>
+      <h2>Saying what the evidence actually is</h2>
       <p>
-        The framework refuses to let &ldquo;it worked&rdquo; stand as a claim. Every result is placed on an
-        evidence ladder, and the honest rung is named:
+        The framework refuses to let &ldquo;it worked&rdquo; stand as a claim. Instead of a score, it asks
+        for a sentence: what was checked, what was observed, and where you stopped. Four questions do the
+        work &mdash; is someone asserting it or did someone verify it; does it hold up again; did the thing
+        you cared about actually move; did it hold where it counts.
       </p>
-      <ol class="ladder">
-        <li><strong>Asserted</strong> — someone says it works.</li>
-        <li><strong>Demonstrated once</strong> — it was seen working, one time.</li>
-        <li><strong>Tested repeatably</strong> — it works again on demand.</li>
-        <li><strong>Measured before and after</strong> — the change is quantified.</li>
-        <li><strong>Observed in the real environment</strong> — it holds in production.</li>
-      </ol>
       <p>
-        The same discipline governs how much autonomy AI is given. Autonomy levels are earned by consistently
-        reaching Proof, capped by blast radius, and revocable when evidence stops supporting them.
+        Stopping early is fine and often correct. Describing weak evidence in language that sounds strong is
+        not. &ldquo;Verified by a test that fails without the change, not yet seen in production&rdquo; is a
+        complete claim; &ldquo;verified&rdquo; on its own is not.
+      </p>
+      <p>
+        The same discipline governs how much autonomy AI is given. Widen what it decides where results of
+        that kind have held up; keep human approval wherever a mistake is expensive or hard to reverse; take
+        the scope back when the results stop holding. Per context, not globally.
       </p>
     </section>
 
@@ -148,7 +149,7 @@
       </p>
 
       <div class="case">
-        <span class="rung">Evidence: observed in the real environment</span>
+        <span class="evidence">Resolved against the live systems</span>
         <h3>Answers when nobody is left to answer</h3>
         <p>
           Most organizations lose knowledge faster than they document it. The people who built a system move
@@ -171,7 +172,7 @@
       </div>
 
       <div class="case">
-        <span class="rung">Evidence: observed in the real environment</span>
+        <span class="evidence">Running in production</span>
         <h3>Composable content architecture</h3>
         <p>
           The content architecture behind a public website redesign: pages are composed from reusable,
@@ -186,7 +187,7 @@
       </div>
 
       <div class="case">
-        <span class="rung">Evidence: measured before and after</span>
+        <span class="evidence">Parity harness and QA sign-off; not yet cut over</span>
         <h3>Enterprise content API migration</h3>
         <p>
           A migration estimated at 8–10 weeks of team effort, executed in about a day. GraphQL to REST and
@@ -200,13 +201,15 @@
         </p>
         <p>
           The speed is not the interesting part. An automated parity harness checked the new API byte-for-byte
-          against live traffic, which is what makes the compatibility claim provable rather than asserted. The
-          limiting factor on work like this turns out to be having an objective way to verify it, not headcount.
+          against live traffic across 36 endpoint cases, and both versions ran side by side with the API
+          gateway pointing at the new one, so QA validated the real site and signed off &mdash; not just
+          matching JSON. The limiting factor on work like this turns out to be having an objective way to
+          verify it, not headcount.
         </p>
       </div>
 
       <div class="case">
-        <span class="rung">Evidence: measured before and after</span>
+        <span class="evidence">Fix validated under load; upstream PR not yet merged</span>
         <h3>A memory leak followed to its root cause</h3>
         <p>
           Recurring out-of-memory crashes in production were first stabilised with a blunt mitigation. The
@@ -215,19 +218,21 @@
         </p>
         <p>
           The root cause reduced to a one-file change, contributed upstream to React so other applications
-          need not carry the same workaround. A workaround resolves an incident; a root cause can resolve a
-          class of them.
+          need not carry the same workaround. The mitigation it replaces was validated on the fleet first:
+          the same image under sustained load restarted 113 times without the flag and zero times with it.
+          A workaround resolves an incident; a root cause can resolve a class of them.
         </p>
       </div>
 
       <div class="case">
-        <span class="rung">Evidence: mixed, stated per pattern</span>
+        <span class="evidence">Stated separately for each</span>
         <h3>Reference implementations</h3>
         <p>
-          Two patterns written up so other teams can reuse them: cross-team knowledge access, and production
-          exception remediation. The first is the one described above and has resolved real incidents. The
-          second has been built and demonstrated against real organizational data, but has not been wired
-          into a team's approval and deployment tooling, so it stays at the lower rung and says so.
+          Three patterns written up so other teams can reuse them: cross-team knowledge access, production
+          exception remediation, and multi-repository defect remediation. The first is the one described
+          above and has resolved real incidents. The other two have run on real work through existing review
+          and deployment approvals, but none is an always-on capability or adopted across an organization,
+          and each still depends on a person providing the map and holding the approvals.
         </p>
       </div>
     </section>
