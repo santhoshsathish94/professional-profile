@@ -3,9 +3,10 @@
     --muted: #4B5563;
     --faint: #6B7280;
     --line: #E5E7EB;
-    --teal: #0F766E;
-    --teal-soft: #F0FDFA;
-    --page: #eef2f4;
+    --accent: #374151;
+    --accent-strong: #1F2937;
+    --accent-soft: #F3F4F6;
+    --page: #eef0f2;
 }
 
 @font-face {
@@ -29,7 +30,7 @@ body {
 }
 
 .wrap {
-    max-width: 860px;
+    max-width: 780px;
     margin: 24px auto;
     background: #fff;
     padding: 48px;
@@ -46,7 +47,7 @@ nav {
 }
 
 nav a {
-    color: var(--teal);
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -76,7 +77,7 @@ h1 {
 }
 
 .role {
-    color: var(--teal);
+    color: var(--muted);
     font-weight: 600;
     font-size: 18px;
     margin: 4px 0 10px;
@@ -95,7 +96,7 @@ h1 {
     }
 }
 
-/* ---------- clover mark ---------- */
+/* ---------- the black clover ---------- */
 
 .clover {
     width: 84px;
@@ -104,19 +105,15 @@ h1 {
 }
 
 .clover__leaf {
-    fill: var(--teal);
-    stroke: var(--teal);
+    fill: #000;
+    stroke: #000;
     stroke-width: 2;
     stroke-linejoin: round;
 }
 
-.clover__leaf.is-soft {
-    fill: var(--teal-soft);
-}
-
 .clover__stem {
     fill: none;
-    stroke: #7fb8b0;
+    stroke: #000;
     stroke-width: 3.5;
     stroke-linecap: round;
 }
@@ -130,115 +127,17 @@ section {
 }
 
 h2 {
-    color: var(--teal);
+    color: var(--accent);
     font-size: 20px;
     margin: 0 0 14px;
-}
-
-h3 {
-    font-size: 17px;
-    margin: 24px 0 6px;
 }
 
 p {
     margin: 0 0 14px;
 }
 
-.note {
-    font-size: 14px;
-    color: var(--faint);
-}
-
-/* ---------- the clover feature block ---------- */
-
-.feature {
-    border: 1px solid var(--line);
-    border-top: 3px solid var(--teal);
-    padding: 26px 28px;
-    margin-top: 4px;
-}
-
-.feature__top {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 22px;
-    align-items: center;
-}
-
-.feature__top h3 {
-    margin: 0 0 6px;
-    font-size: 20px;
-}
-
-.feature .clover {
-    width: 72px;
-    height: 72px;
-}
-
-@media (max-width: 560px) {
-    .feature {
-        padding: 20px;
-    }
-
-    .feature__top {
-        grid-template-columns: 1fr;
-        gap: 14px;
-    }
-}
-
-.stages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 14px;
-    margin: 22px 0 8px;
-    padding: 0;
-    list-style: none;
-}
-
-.stages li {
-    border: 1px solid var(--line);
-    border-top: 3px solid var(--teal);
-    padding: 14px 16px;
-}
-
-.stages strong {
-    display: block;
-    color: var(--teal);
-    margin-bottom: 4px;
-}
-
-.stages span {
-    font-size: 14px;
-    color: var(--muted);
-}
-
-/* ---------- work entries ---------- */
-
-.entry {
-    border-left: 3px solid var(--line);
-    padding: 2px 0 2px 18px;
-    margin-bottom: 22px;
-}
-
-.entry h3 {
-    margin: 0 0 6px;
-}
-
-.entry p:last-child {
+section p:last-of-type {
     margin-bottom: 0;
-}
-
-.entry .state {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    color: var(--teal);
-    background: var(--teal-soft);
-    border: 1px solid #99F6E4;
-    padding: 3px 9px;
-    margin-bottom: 10px;
 }
 
 /* ---------- link buttons ---------- */
@@ -247,86 +146,32 @@ p {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 4px 0 0;
+    margin: 20px 0 0;
     padding: 0;
     list-style: none;
 }
 
 .links a {
     display: inline-block;
-    border: 1px solid var(--teal);
-    color: var(--teal);
+    border: 1px solid var(--accent);
+    color: var(--accent);
     text-decoration: none;
     padding: 9px 16px;
     font-size: 15px;
 }
 
 .links a:hover {
-    background: var(--teal);
+    background: var(--accent);
     color: #fff;
 }
 
 .links a.is-primary {
-    background: var(--teal);
+    background: var(--accent);
     color: #fff;
 }
 
 .links a.is-primary:hover {
-    background: #0b5a54;
-}
-
-/* ---------- repo list ---------- */
-
-.repos {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.repos li {
-    border-top: 1px solid var(--line);
-    padding: 14px 0;
-}
-
-.repos li:first-child {
-    border-top: 0;
-    padding-top: 0;
-}
-
-.repos a {
-    color: var(--teal);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.repos a:hover {
-    text-decoration: underline;
-}
-
-.repos p {
-    margin: 4px 0 0;
-    font-size: 15px;
-    color: var(--muted);
-}
-
-/* ---------- contact ---------- */
-
-.contact {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 8px 34px;
-    margin: 0;
-    font-size: 14px;
-    color: var(--faint);
-}
-
-.contact a {
-    color: var(--teal);
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
+    background: var(--accent-strong);
 }
 
 footer {
@@ -338,8 +183,12 @@ footer {
 }
 
 footer a {
-    color: var(--teal);
+    color: var(--accent);
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 640px) {
