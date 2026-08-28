@@ -119,6 +119,61 @@ h1 {
     stroke-linecap: round;
 }
 
+/* Clover keeps its own green wherever the framework is the subject. */
+.clover--green .clover__leaf {
+    fill: #0a6a5f;
+    stroke: #0a6a5f;
+}
+
+.clover--green .clover__stem {
+    stroke: #7fb8b0;
+}
+
+.mark-row {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.mark-row .clover {
+    width: 68px;
+    height: 68px;
+    margin-top: 2px;
+}
+
+.mark-row p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 560px) {
+    .mark-row {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+}
+
+/* Devanagari falls outside Inter, so name faces that carry it. */
+.verse {
+    margin: 26px 0 0;
+    padding: 0 0 0 20px;
+    border-left: 2px solid var(--line);
+}
+
+.verse p[lang="sa"] {
+    font-family: "Nirmala UI", "Noto Sans Devanagari", "Mangal", serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: var(--ink);
+    margin: 0 0 12px;
+}
+
+.verse__meaning {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+}
+
 /* ---------- sections ---------- */
 
 section {
