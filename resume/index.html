@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santhosh Narayanan | Résumé</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+  <main class="resume">
+    <nav class="site-nav">
+      <a href="../">About</a>
+      <a href="../work/">Selected work</a>
+      <span class="is-current">Résumé</span>
+      <a href="https://santhoshsathish94.github.io/ai-orchestration-framework/">Clover</a>
+      <a href="https://github.com/santhoshsathish94">GitHub</a>
+    </nav>
+
+    <header>
+      <h1>Santhosh Narayanan</h1>
+      <p class="role">Engineer</p>
+      <p class="tagline">
+        <strong>A decade designing systems that people can understand, trust, and evolve.</strong><br>
+        Applying that systems thinking to AI orchestration, human-AI collaboration, and practical AI adoption.
+      </p>
+
+      <p class="contact">
+        <span>Email <a href="mailto:santhoshsathish94@gmail.com">santhoshsathish94@gmail.com</a></span>
+        <span>Phone +91-741383614</span>
+        <span>LinkedIn <a href="https://www.linkedin.com/in/santhosh-narayanan-link/">/in/santhosh-narayanan-link</a></span>
+        <span>GitHub <a href="https://github.com/santhoshsathish94">/santhoshsathish94</a></span>
+        <span>Website <a href="https://santhoshsathish94.github.io/professional-profile/">santhoshsathish94.github.io/professional-profile</a></span>
+        <span>Location Chennai, India &middot; open to relocation</span>
+      </p>
+    </header>
+
+    <section>
+      <h2>Profile</h2>
+      <p>
+        Engineer with ten years designing and modernizing enterprise software systems, now working on AI
+        orchestration, human-AI collaboration, and practical AI adoption. Creator of <strong>Clover</strong>, an
+        open AI Orchestration Framework connecting real-world Context, human Direction, AI-driven Action, and
+        validated Success into a repeatable cycle. I treat AI as an engineering capability rather than a set of
+        tools: read the real system first, keep human accountability, and let the environment show the outcome.
+      </p>
+    </section>
+
+    <section>
+      <h2>AI Engineering &amp; Orchestration</h2>
+
+      <h3>Clover — AI Orchestration Framework <span>Open-source project &bull; 2026 &ndash; Present</span></h3>
+      <p class="roles"><a href="https://santhoshsathish94.github.io/ai-orchestration-framework/">santhoshsathish94.github.io/ai-orchestration-framework</a></p>
+      <ul>
+        <li>Defined a four-stage cycle, <strong>Context → Direction → Action → Success</strong>, that puts the systems an organization already runs ahead of the request, so direction is given against what is actually there.</li>
+        <li>Made every claim state what was checked, what was observed, and where it stopped &mdash; so widening what AI decides is earned against results rather than assumed, including on my own claims.</li>
+        <li>Focused the framework on adoption: making AI approaches understandable and reusable by broader teams rather than concentrating expertise in a few people.</li>
+        <li>Built it to improve how a team already works rather than replace it &mdash; no new runtime and no change of systems or tooling, so it can be adopted incrementally on whatever is already in place.</li>
+        <li>Shipped an interactive public website, quickstart, working templates, reference implementations, field lessons, and case studies that state their own limits.</li>
+      </ul>
+
+      <h3>Production AI-Assisted Engineering</h3>
+
+      <h4>Enterprise Content API Migration</h4>
+      <ul>
+        <li>Executed a migration estimated at <strong>8–10 weeks of team effort in approximately one day</strong>, with testing and validation taking a further day — GraphQL → REST and .NET 9 MVC → .NET 10 Minimal APIs, preserving every route, JSON shape, and response envelope so no consumer had to change.</li>
+        <li>Replaced approximately <strong>7,800 lines across 200+ files</strong>, with byte-for-byte parity proven against live traffic by an automated harness rather than by review.</li>
+      </ul>
+
+      <h4>Production React / Next.js Memory Leak</h4>
+      <ul>
+        <li>Traced recurring out-of-memory failures past an operational workaround to their root cause inside React Server Components rendering, using load testing, heap snapshots, and AI-assisted analysis.</li>
+        <li>Reduced the fix to a single file and contributed it upstream to React as an open pull request &mdash; <a href="https://github.com/react/react/pull/37289">react/react#37289</a>, with a <a href="https://github.com/santhoshsathish94/react-flight-oom-repro">public reproduction</a> &mdash; so other applications need not carry the same workaround.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+
+      <h3>Xome <span>Jan 2020 – Present • US real estate &amp; mortgage technology</span></h3>
+      <p class="roles">AI Orchestration Architect (Jul 2025 – Present) &middot; Lead Engineer (Jan 2020 – Jul 2025)</p>
+
+      <h4>Applied AI Enablement</h4>
+      <p>Ran internal sessions and workshops to move the engineering team onto AI-assisted ways of working, and built the orchestration they use day to day: read-only MCP servers over internal systems, plus automated deployment testing wired into non-production environments and pipeline triggers. Nothing about the existing systems had to change to adopt it. Much of the team now works largely through an AI chat interface and keeps doing so without me in the loop &mdash; expertise should not live with one person, including me.</p>
+
+      <h4>Recovering Knowledge Nobody Was Left to Hold</h4>
+      <p>A production data issue survived an overnight investigation: new listings were not appearing after repeated loads, the team that built the sync had left, and thousands of per-organization mappings were undocumented. The same orchestration setup backtracked from the customer-visible symptom to a single misconfigured flag between ingestion and the database. A separate support case &mdash; favourites showing on desktop but not mobile, caused by an email-relay service silently creating a second account &mdash; had been circulating without a clear owner, and was answered the same way.</p>
+
+      <h4>Composable Content Architecture &mdash; xome.com Redesign</h4>
+      <p>Designed the content architecture behind the xome.com redesign: pages are composed from reusable, independently governed sections instead of hand-built templates, so a new page ships without a code change. <strong>50 published pages across 8 page types</strong> run on it today, with permitted nesting, layout variants, and required fields enforced by the model rather than by review, so authors compose freely and stay inside brand standards.</p>
+
+      <h4>API Surface &mdash; Architecture Decision</h4>
+      <p>Made the case against a proposed single generic content endpoint, on the grounds that distinct contracts stay independently testable and confine the blast radius of a future content change to one resource. The team chose separate per-resource endpoints, and the API is built that way.</p>
+
+      <h4>Platform Architecture &amp; Technical Advisory</h4>
+      <p>Separated the Xome experience from shared platform capabilities so each can evolve independently, and redesigned enterprise address search with a new indexing strategy that improved accuracy without losing existing capability. Take architecture decisions from technical trade-offs through to the business case and back, working from India with US-based engineering teams and business stakeholders across a ten-and-a-half hour time difference.</p>
+
+      <div class="role-block">
+        <h3>Chatly <span>Software Engineer &bull; Nov 2018 &ndash; Jan 2020</span></h3>
+        <h4>Global Calls Platform</h4>
+        <p>Transformed a business-critical WeChat integration platform into a system the team could understand, evolve, and confidently extend. Worked directly with the team and leadership on scope, trade-offs, and direction.</p>
+      </div>
+
+      <div class="role-block">
+        <h3>UB Technology Innovations <span>Software Engineer &bull; Jun 2016 &ndash; Oct 2018</span></h3>
+        <h4>Payroll Platform</h4>
+        <p>Built a payroll platform around real operational workflows, enabling administrators to validate, correct, and trust payroll results.</p>
+
+        <h4>Client-Facing Delivery</h4>
+        <p>Worked directly with clients and business stakeholders through requirements, demonstrations, and rollout, translating operational needs into system design and explaining technical constraints in terms the business could act on.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Architecture &amp; Engineering</h2>
+
+      <h3>AI &amp; Applied AI</h3>
+      <p>AI Orchestration • Human-AI Collaboration • AI-Assisted Software Engineering • AI Adoption • Evidence-Based Engineering</p>
+
+      <h3>Architecture</h3>
+      <p>Software Architecture • Distributed Systems • Platform Architecture • Enterprise Modernization • API Architecture • Integration Architecture • Systems Thinking</p>
+
+      <h3>Engineering &amp; Cloud</h3>
+      <p>.NET • C# • React • Next.js • TypeScript • GraphQL • REST APIs • SQL Server • Azure • Kubernetes • Docker • Azure DevOps • Contentful • Elasticsearch<br>
+        Primary languages C# and TypeScript; comfortable reading and working in Python.</p>
+
+      <h3>Practice &amp; Communication</h3>
+      <p>Production Debugging • Performance Engineering • Root-Cause Analysis • Load Testing • Technical Writing • Engineer Training • Stakeholder Communication • Translating Trade-offs into Business Terms</p>
+    </section>
+
+    <section>
+      <h2>Engineering Principles</h2>
+      <p><strong>Read the system before fixing it.</strong> Establish enough real context to know what is actually wrong before choosing a solution.</p>
+      <p><strong>Focus over parallelism.</strong> Attention is the scarce resource. Running work in parallel is not the same as making progress.</p>
+      <p><strong>Let the environment show the outcome.</strong> A successful execution says nothing about a successful outcome. Name what you actually checked.</p>
+      <p><strong>Design for adoption.</strong> Capability that stays with one person does not change how an organization works.</p>
+      <p><strong>Simplicity gives clarity.</strong> Complication creates confusion. Keep the answer as small as it will go.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p>
+        <strong>Bachelor of Engineering (B.E.)</strong>, Computer Science &amp; Engineering<br>
+        Anna University, Chennai
+      </p>
+    </section>
+  </main>
+</body>
+</html>
